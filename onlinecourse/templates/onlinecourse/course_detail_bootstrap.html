@@ -50,7 +50,7 @@
                     </div>
                     <div class="container-fluid">
                         {% if user.is_authenticated %}
-                        <form id="questionform" action="point to a submit view" method="post">
+                        <form id="questionform" action= "{% url 'onlinecourse:submit' course_id=course.id %}" method="post">
                             {% for question in lesson.question_set.all %}
                             <div class="card mt-1" id="{{lesson.id}}">
                                 <div class="card-header "><h5>{{ question.question_text}}</h5></div>

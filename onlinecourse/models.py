@@ -20,7 +20,7 @@ class Instructor(models.Model):
     total_learners = models.IntegerField()
 
     def __str__(self):
-        return self.user.username
+        return self.user.name
 
 
 # Learner model
@@ -101,6 +101,7 @@ class Enrollment(models.Model):
     # Has a grade point for each question
     # Has question content
     # Other fields and methods you would like to design
+
 class Question(models.Model):
     # Foreign key to lesson
     # question text
